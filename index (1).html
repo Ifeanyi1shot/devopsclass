@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Thus an ecommance Discount Coupon</title>
+    <style>
+        body { caption-side c     c c c cvvvxxjcjcjcjjjjdjskk
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .coupon-form {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            display: none;
+            border-radius: 5px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Apply Your Discount Coupon</h1>
+
+        <form class="coupon-form" id="couponForm">
+            <label for="coupon">Enter Coupon Code:</label>
+            <input type="text" id="coupon" name="coupon" placeholder="Enter coupon code here...">
+            <input type="submit" value="Apply Coupon">
+        </form>
+
+        <div class="message success" id="successMessage">Coupon applied successfully!</div>
+        <div class="message error" id="errorMessage">Invalid coupon code. Please try again.</div>
+    </div>
+
+    <script>
+        document.getElementById("couponForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+            var couponCode = document.getElementById("coupon").value;
+
+            // Simple coupon validation logic (in a real-world app, this would be done server-side)
+            if (couponCode === "DISCOUNT10") {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("errorMessage").style.display = "none";
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+                document.getElementById("successMessage").style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>
